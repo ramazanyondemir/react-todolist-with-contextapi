@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+    .todo-form-container {
+      width: 100%;
+      .todo-list {
+        width: 100%;
+      }
+    }
+  }
+}

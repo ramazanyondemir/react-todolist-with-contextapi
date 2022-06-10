@@ -1,0 +1,90 @@
+@import "./media.scss";
+
+// default reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+html,
+body,
+.App {
+  height: 100vh;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #161f5a;
+  padding-top: 10px;
+  overflow-x: hidden;
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
+  .todo-form-container {
+    width: 500px;
+    min-height: 50px;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+    .form {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      .todo-input {
+        width: 100%;
+        font-size: 1.2rem;
+        margin-right: 10px;
+        padding: 0 10px;
+      }
+      // If you remove the background color or appearance,
+      // the height value will not work for safari.
+      .todo-submit {
+        -webkit-appearance: none;
+        border: none;
+        font-size: 17px;
+        min-width: 60px;
+        background: yellowgreen;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+  .todo-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    width: 500px;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+    .todo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2px;
+      background-color: #fff;
+      border: 1px solid #3333;
+      justify-content: space-between;
+      .title {
+        display: flex;
+        align-items: center;
+        width: 430px;
+        min-height: 36px;
+        margin-top: 2px;
+        padding: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .remove-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        border: none;
+        background: #d6542c;
+        cursor: pointer;
+      }
+    }
+  }
+}
