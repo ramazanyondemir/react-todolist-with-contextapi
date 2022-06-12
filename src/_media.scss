@@ -2,6 +2,11 @@
   .App {
     padding: 10px;
     .todo-form-container {
+      .form {
+        .todo-input {
+          height: 50px;
+        }
+      }
       width: 100%;
       .todo-list {
         width: 100%;
